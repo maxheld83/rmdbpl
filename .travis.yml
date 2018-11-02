@@ -14,7 +14,9 @@ deploy:
       branch: master
   - provider: script
     skip_cleanup: true
-    script: bash deploy2karli.sh
+    script:
+      - pwd
+      - bash deploy2karli.sh
     on:
       branch: master
 notifications:
