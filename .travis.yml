@@ -15,7 +15,7 @@ deploy:
   - provider: script
     skip_cleanup: true
     script:
-      - curl -OL https://raw.githubusercontent.com/soztag/fau_deploy/master/deploy2karli.sh
+      - curl -OL http://raw.githubusercontent.com/soztag/fau_deploy/master/deploy2karli.sh
       - bash deploy2karli.sh
     on:
       branch: master
