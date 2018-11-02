@@ -14,10 +14,7 @@ deploy:
       branch: master
   - provider: script
     skip_cleanup: true
-    script:
-      - pwd
-      - curl -OL https://raw.githubusercontent.com/soztag/fau_deploy/master/deploy2karli.sh
-      - bash deploy2karli.sh
+    script: bash deploy2karli.sh
     on:
       branch: master
 notifications:
