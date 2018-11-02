@@ -16,11 +16,8 @@ deploy:
     skip_cleanup: true
     script:
       - pwd
-      - ls
-      - bash fau_deploy/deploy2karli.sh
-      - rm -rf fau_deploy
-      - git clone https://github.com/soztag/fau_deploy.git
-      - ls
+      - curl -OL https://raw.githubusercontent.com/soztag/fau_deploy/master/deploy2karli.sh
+      - bash deploy2karli.sh
     on:
       branch: master
 notifications:
