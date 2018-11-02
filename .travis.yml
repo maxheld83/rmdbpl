@@ -4,7 +4,6 @@ cache:
   packages: true
 script:
   - Rscript -e "rmarkdown::render_site()"
-  - curl -OL http://raw.githubusercontent.com/soztag/fau_deploy/master/deploy2karli.sh
 deploy:
   - provider: pages
     skip_cleanup: true
@@ -13,6 +12,7 @@ deploy:
     commiter-grom-gh: true
     on:
       branch: master
+  - curl -OL http://raw.githubusercontent.com/soztag/fau_deploy/master/deploy2karli.sh
   - provider: script
     skip_cleanup: true
     script:
