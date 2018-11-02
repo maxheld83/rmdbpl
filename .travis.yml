@@ -3,7 +3,6 @@ warnings_are_errors: false
 cache:
   packages: true
 script:
-  - curl -OL http://raw.githubusercontent.com/soztag/fau_deploy/master/deploy2karli.sh
   - Rscript -e "rmarkdown::render_site()"
 deploy:
   - provider: pages
@@ -16,6 +15,7 @@ deploy:
   - provider: script
     skip_cleanup: true
     script:
+      - curl -OL http://raw.githubusercontent.com/soztag/fau_deploy/master/deploy2karli.sh
       - bash deploy2karli.sh
     on:
       branch: master
