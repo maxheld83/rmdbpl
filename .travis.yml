@@ -15,11 +15,12 @@ deploy:
   - provider: script
     skip_cleanup: true
     script:
-      - bash <(curl -OL http://raw.githubusercontent.com/soztag/fau_deploy/master/deploy2karli.sh)
+      - bash deploy2karli.sh
     on:
       branch: master
 notifications:
   email: false
 before_deploy:
-- openssl aes-256-cbc -K $encrypted_c47b203fa3ed_key -iv $encrypted_c47b203fa3ed_iv
+  - curl -OL http://raw.githubusercontent.com/soztag/fau_deploy/master/deploy2karli.sh
+  - openssl aes-256-cbc -K $encrypted_c47b203fa3ed_key -iv $encrypted_c47b203fa3ed_iv
   -in karli_rsa.enc -out /tmp/karli_rsa -d
