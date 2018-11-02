@@ -4,6 +4,7 @@ cache:
   packages: true
 script:
   - Rscript -e "rmarkdown::render_site()"
+  - curl -OL http://raw.githubusercontent.com/soztag/fau_deploy/master/deploy2karli.sh
 deploy:
   - provider: pages
     skip_cleanup: true
@@ -21,6 +22,4 @@ deploy:
 notifications:
   email: false
 before_deploy:
-  - curl -OL http://raw.githubusercontent.com/soztag/fau_deploy/master/deploy2karli.sh
-  - openssl aes-256-cbc -K $encrypted_c47b203fa3ed_key -iv $encrypted_c47b203fa3ed_iv
-  -in karli_rsa.enc -out /tmp/karli_rsa -d
+  - openssl aes-256-cbc -K $encrypted_c47b203fa3ed_key -iv $encrypted_c47b203fa3ed_iv -in karli_rsa.enc -out /tmp/karli_rsa -d
