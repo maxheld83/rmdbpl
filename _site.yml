@@ -1,0 +1,6 @@
+name: "rmd boilerplate"
+navbar:
+  title: "boilerplate"
+  left:
+    - text: "Home"
+      href: index.html
