@@ -2,7 +2,9 @@
 title: "index"
 author: "foo"
 date: "11/2/2018"
-output: html_document
+output:
+  rmarkdown::html_document:
+    dev: 'svglite'
 ---
 
 ```{r setup, include=FALSE}
