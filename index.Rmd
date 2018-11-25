@@ -6,6 +6,11 @@ output:
   rmarkdown::html_document
 ---
 
+```{r}
+gdtools::match_family("Arial")
+gdtools::match_family("sans")
+```
+
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
 ```
