@@ -6,6 +6,8 @@ output:
   rmarkdown::html_document
 ---
 
+Hello world!
+
 ```{r}
 gdtools::match_family("Arial")
 gdtools::match_family("sans")
